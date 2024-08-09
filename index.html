@@ -49,90 +49,74 @@
 	
 <style>
 :root {
-	color: #cc1010;
-	font-family: "Shantell Sans";	
-	font-size: 21;
-   	-ms-overflow-style: none;
-  	scrollbar-width: none; 
-    	text-align: center;	
+    color: #cc1010;
+    font-family: "Shantell Sans";    
+    font-size: 21px;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+    text-align: center;    
 }
-a:link {
-	color: #cc1010;
+
+a:link, a:visited, a:hover, a:active {
+    color: #cc1010;
+    text-decoration: none;
 }
-a:visited {
-	color: #cc1010;
-}
-a:hover {
-	color: #cc1010;
-}
-a:active {
-	color: #cc1010;
-}
-a:link {
-	text-decoration:none;
-}
+
 img, jpg {
-  opacity: 0.5;
-  height: auto;
+    opacity: 0.5;
+    height: auto;
 }
-audio   { 
-	display:none;
+
+audio { 
+    display:none;
 }
+
 .hidden {
-	display: none;
+    display: none;
 }
-h1, h2, h3, h4, h5 {	
-	margin-top: 5;
-	margin-bottom: 5;
-	padding: 5;
+
+h1, h2, h3, h4, h5 {    
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
 }
+
 .container {
-	width: 800px;
-	margin: 0 auto;
-	display: flex;
-	justify-content: center;
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+.left-box, .right-box, .middle-box {
+    padding: 10px;
+    max-width: 800px;
+    position: relative;
+    display: block;
+    border: 2px solid rgba(204, 16, 16);
+    box-shadow: 0px 0px 5px rgba(204, 16, 16);
+    backdrop-filter: blur(1px);
+}
+
 .left-box {
-	margin-right: 20px;
-	flex: 1;
-	padding: 10px;
-	max-width: 800px;
-	position: relative;
-	display: block;
-	border: 2px solid rgba(204, 16, 16);
-	box-shadow: 0px 0px 5px rgba(204, 16, 16);
-	backdrop-filter: blur(1px)
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
-.left-box:hover {
-	border: 2px solid rgba(255, 50, 50);	
+
+.left-box:hover, .right-box:hover, .middle-box:hover {
+    border: 2px solid rgba(255, 50, 50);
 }
-.right-box {
-	flex: 2;
-	padding: 10px;
-	max-width: 800px;
-	position: relative;
-	display: block;
-	border: 2px solid rgba(204, 16, 16);;
-	box-shadow: 0px 0px 5px rgba(204, 16, 16);
-	backdrop-filter: blur(1px)
-}
-.right-box:hover {	
-	border: 2px solid rgba(255, 50, 50);
-}
+
 .middle-box {
-	margin-top: 20px;
-	margin-bottom: 10px;
-	padding: 10px;
-	width: 800px;
-	position: relative;
-	display: block;
-	border: 2px solid rgba(204, 16, 16);
-	box-shadow: 0px 0px 5px rgba(204, 16, 16);
-	backdrop-filter: blur(1px)
+    margin-top: 20px;
 }
-.middle-box:hover {	
-	border: 2px solid rgba(255, 50, 50);
-}
+
 
 /* Additional CSS */
 
