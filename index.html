@@ -79,6 +79,8 @@ h1, h2, h3, h4, h5 {
     margin-top: 5px;
     margin-bottom: 5px;
     padding: 5px;
+    z-index: 11; /* Ensures text is on top */
+    position: relative;
 }
 
 .container {
@@ -92,6 +94,7 @@ h1, h2, h3, h4, h5 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 10; /* Ensures the container is on top */
 }
 
 .left-box, .right-box, .middle-box {
@@ -102,6 +105,8 @@ h1, h2, h3, h4, h5 {
     border: 2px solid rgba(204, 16, 16);
     box-shadow: 0px 0px 5px rgba(204, 16, 16);
     backdrop-filter: blur(1px);
+    z-index: 10; /* Brings the boxes to the foreground */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Semi-transparent background for better text visibility */
 }
 
 .left-box {
