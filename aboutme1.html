@@ -7,16 +7,10 @@
     <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <script src="../../cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.3/lottie.min.js"></script>
     <script src="../../code.jquery.com/jquery-3.6.0.min.js"></script>
-
-
-
     
 <script>
+  // Additional JavaScript
 
-
-// Additional css
-
-    
   // array of image URLs
   var images = ["/fullscreen/svg_img/grain-01.png", "svg_img/grain-02.png", "svg_img/grain-03.png", "svg_img/grain-04.png", "svg_img/grain-05.png", "svg_img/grain-06.png", "svg_img/grain-07.png", "/fullscreen/svg_img/grain-08.png"];
   
@@ -34,155 +28,224 @@
 </script>
     
 <style>
-    
     * {
-      margin:0px;
-      padding:0px;
-      }
+      margin: 0;
+      padding: 0;
+    }
       
     body {
-      background-color:black !important;
-      overflow:hidden;
-      }
-      
+      background-color: black !important;
+      overflow: hidden;
+    }
+
     #animation {
-      position:absolute;
-      width:100vw;
-      height:31.25vw;
-      top:50%;
-      transform:translateY(-50%);
-      }
-      
+      position: absolute;
+      width: 100vw;
+      height: 31.25vw;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
     #maskBottom {
-      position:absolute;
-      width:100vw;
-      height:2vw;
-      top:50%;
-      transform:translateY(700%);
-      background-color:black;
-      }
-    
+      position: absolute;
+      width: 100vw;
+      height: 2vw;
+      top: 50%;
+      transform: translateY(700%);
+      background-color: black;
+    }
+
     #maskTop {
-      position:absolute;
-      width:100vw;
-      height:2vw;
-      top:50%;
-      transform:translateY(-820%);
-      background-color:black;
-      }
-      
+      position: absolute;
+      width: 100vw;
+      height: 2vw;
+      top: 50%;
+      transform: translateY(-820%);
+      background-color: black;
+    }
+
     #trainBG {
-      background-color:white;
-      position:absolute;
-      width:99vw;
-      height:30vw;
-      top:50%;
-      left:50%;
-      transform:translate(-50%, -50%);
-      }
-    
+      background-color: white;
+      position: absolute;
+      width: 99vw;
+      height: 30vw;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
     .bridge {
-      background-image:url("svg_img/bridge-01.svg");
-      background-size:220vw;
+      background-image: url("svg_img/bridge-01.svg");
+      background-size: 220vw;
       background-position: -200vw center;
-      background-repeat:no-repeat;
+      background-repeat: no-repeat;
       animation: bridge 30s linear infinite;
       animation-delay: 3s;
-      }
-      
+    }
+
     @keyframes bridge {
       0% {background-position: -200vw center;}
       7% {background-position: 100vw center;}
       100% {background-position: 100vw center;}
     }
-    
+
     .skyline01 {
-      background-image:url("svg_img/skyline-01.svg");
-      background-size:100vw;
+      background-image: url("svg_img/skyline-01.svg");
+      background-size: 100vw;
       background-position: center center;
-      background-repeat:repeat-x;
+      background-repeat: repeat-x;
       animation: skyline 80s linear infinite;
-      }
-      
+    }
+
     .skyline02 {
-      background-image:url("svg_img/skyline-02.svg");
-      background-size:100vw;
+      background-image: url("svg_img/skyline-02.svg");
+      background-size: 100vw;
       background-position: center center;
-      background-repeat:repeat-x;
+      background-repeat: repeat-x;
       animation: skyline 40s linear infinite;
-      }
-      
+    }
+
     .house01 {
-      background-image:url("svg_img/house-02.svg");
-      background-size:100vw;
+      background-image: url("svg_img/house-02.svg");
+      background-size: 100vw;
       background-position: center center;
-      background-repeat:repeat-x;
+      background-repeat: repeat-x;
       animation: skyline 20s linear infinite;
-      }
-      
+    }
+
     @keyframes skyline {
       0% {background-position: -100vw center;}
       100% {background-position: 100vw center;}
     }
-    
+
     .bg {
-      position:absolute;
-      top:50%;
-      transform:translateY(-50%);
-      height:31.25vw;
-      width:100vw;
-      }
-      
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 31.25vw;
+      width: 100vw;
+    }
+
     .electricalPole01 {
-      background-image:url("svg_img/electrical_pole_01.svg");
-      background-size:150vw;
+      background-image: url("svg_img/electrical_pole_01.svg");
+      background-size: 150vw;
       background-position: center center;
-      background-repeat:no-repeat;
+      background-repeat: no-repeat;
       animation: electricalPole 10s linear infinite;
-      }
-    
+    }
+
     .trainPole01 {
-      background-image:url("svg_img/train-pole-01.svg");
-      background-size:100vw;
+      background-image: url("svg_img/train-pole-01.svg");
+      background-size: 100vw;
       background-position: center center;
-      background-repeat:repeat-x;
+      background-repeat: repeat-x;
       animation: skyline 2s linear infinite;
-      }
-      
+    }
+
     .electricalPole02 {
-      background-image:url("svg_img/electricalPole02.svg");
-      background-size:100vw;
+      background-image: url("svg_img/electricalPole02.svg");
+      background-size: 100vw;
       background-position: center center;
-      background-repeat:repeat-x;
+      background-repeat: repeat-x;
       animation: skyline 3s linear infinite;
-      }
-      
+    }
+
     .electricalPole03 {
-      background-image:url("svg_img/electricalPole03.svg");
-      background-size:100vw;
+      background-image: url("svg_img/electricalPole03.svg");
+      background-size: 100vw;
       background-position: center center;
-      background-repeat:repeat-x;
+      background-repeat: repeat-x;
       animation: skyline 6s linear infinite;
-      }
-      
-     @keyframes electricalPole {
+    }
+
+    @keyframes electricalPole {
       0% {background-position: -200vw center;}
       30% {background-position: 100vw center;}
       100% {background-position: 100vw center;}
     }
 
-#grain {
-  position:absolute;
-  pointer-events:none;
-  width:100vw;
-  height:100vh;
-  background-image:url("svg_img/grain-01.png");
-  z-index:9998;
-  }
-      
-    </style>
-  </head>
-  <body>
+    #grain {
+      position: absolute;
+      pointer-events: none;
+      width: 100vw;
+      height: 100vh;
+      background-image: url("svg_img/grain-01.png");
+      z-index: 9998;
+    }
+
+    :root {
+      color: #000000;
+      font-family: "Shantell Sans";    
+      font-size: 21px;
+      -ms-overflow-style: none;
+      scrollbar-width: none; 
+      text-align: center;    
+    }
+
+    a:link, a:visited, a:hover, a:active {
+      color: #000000;
+      text-decoration: none;
+    }
+
+    img, jpg {
+      opacity: 0.5;
+      height: auto;
+    }
+
+    audio { 
+      display: none;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    h1, h2, h3, h4, h5 {    
+      margin-top: 5px;
+      margin-bottom: 5px;
+      padding: 5px;
+      z-index: 11; /* Ensures text is on top */
+      position: relative;
+    }
+
+    .container {
+      width: 800px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10; /* Ensures the container is on top */
+    }
+
+    .left-box, .right-box {
+      padding: 10px;
+      max-width: 800px;
+      position: relative;
+      display: block;
+      border: 2px solid rgba(204, 16, 16);
+      box-shadow: 0px 0px 5px rgba(204, 16, 16);
+      backdrop-filter: blur(1px);
+      z-index: 10; /* Brings the boxes to the foreground */
+      background-color: rgba(0, 0, 0, 0.5); /* Optional: Semi-transparent background for better text visibility */
+    }
+
+    .left-box {
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+
+    .left-box:hover, .right-box:hover {
+      border: 2px solid rgba(255, 50, 50);
+    }
+
+</style>
+</head>
+<body>
 
     <div id="trainBG"></div>
     <div class="skyline01 bg"></div>
@@ -201,6 +264,22 @@
     <div id="maskBottom"></div>
     <div id="maskTop"></div>
 
+    <div class="container">
+        <div class="left-box">
+            <a href="https://www.instagram.com/_simplydilan337/"> 
+                <img src="fullscreen/clouds/dilan.png" width="250"> 
+            </a> 
+            <br>    
+            <h4>Dilan Hançer</h4>
+            <h5><i>IG: _simplydilan337</i></h5>
+        </div>
+
+        <div class="right-box">
+            <h4>✮ Greetings ✮</h4> 
+            <h6>Welcome to my little corner of the internet! I'm someone who finds joy in exploring every depth of life, always pushing the limits, always curious about what the world has to offer. Originally from the vibrant city of Istanbul, I now reside in the beautiful coastal city of Antalya, Turkiye. I have a passion for the arts, whether it's creating music on my guitar, immersing myself in creative projects, or simply appreciating the beauty around me. My personality is rooted in optimism, and I approach life with a Realistic yet cheerful attitude. Whether it's a friend or a stranger passing by, I believe in the power of making the world a better place for those around me.</h6>
+        </div>
+    </div>
+
     <script>
       var animation = bodymovin.loadAnimation({
         container: document.getElementById('animation'),
@@ -211,8 +290,5 @@
       });
     </script>
     
-
-   
   </body>
-
 </html>
