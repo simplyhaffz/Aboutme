@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dilan The Queen</title>
+    <title>Haffz The Queen</title>
     <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <script src="../../cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.3/lottie.min.js"></script>
     <script src="../../code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -241,6 +241,40 @@
 
         .left-box:hover, .right-box:hover {
             border: 2px solid rgba(255, 50, 50);
+        }
+
+        /* Responsive styling for mobile */
+        @media (max-width: 768px) {
+            #animation {
+                height: 50vh; /* Adjust height for mobile */
+            }
+
+            .container {
+                width: 90vw; /* Make container fit within mobile screen */
+                padding: 10px;
+            }
+
+            .left-box, .right-box {
+                max-width: 90vw;
+                padding: 10px;
+            }
+
+            h4, h5, h6 {
+                font-size: 1.1em;
+            }
+
+            .left-box {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            #trainBG {
+                height: 50vh; /* Adjust background for mobile */
+            }
+
+            .bg {
+                height: 50vh;
+            }
         }
     </style>
 </head>
