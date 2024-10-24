@@ -29,20 +29,17 @@ body {
 
 #word {
   opacity: 0;
-  transition: opacity 2s;  /* Slow down the opacity transition */
-  animation: shake 0.5s ease-in-out infinite; /* Apply shake effect */
+  transition: opacity 2s;  /* Slow fade-in and fade-out */
+  animation: swing 3s ease-in-out infinite; /* Light swing effect */
   z-index: 1;
 }
 
-@keyframes shake {
+@keyframes swing {
   0%, 100% {
-    transform: translateX(0);
+    transform: translateX(0); /* Start and end with no movement */
   }
-  10%, 30%, 50%, 70%, 90% {
-    transform: translateX(-2px);
-  }
-  20%, 40%, 60%, 80% {
-    transform: translateX(2px);
+  50% {
+    transform: translateX(10px); /* Light horizontal movement */
   }
 }
 
