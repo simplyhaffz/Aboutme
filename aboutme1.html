@@ -10,19 +10,11 @@
     
     <script>
         // Additional JavaScript
-
-        // array of image URLs
         var images = ["/fullscreen/svg_img/grain-01.png", "svg_img/grain-02.png", "svg_img/grain-03.png", "svg_img/grain-04.png", "svg_img/grain-05.png", "svg_img/grain-06.png", "svg_img/grain-07.png", "/fullscreen/svg_img/grain-08.png"];
-        
-        // starting index
         var i = 0;
-        
-        // set interval to change background image
+
         setInterval(function() {
-            // update index
             i = (i + 1) % images.length;
-        
-            // update div's background image
             $("#grain").css("background-image", "url(" + images[i] + ")");
         }, 50);
     </script>
@@ -89,27 +81,24 @@
             100% {background-position: 100vw center;}
         }
 
-        .skyline01 {
-            background-image: url("svg_img/skyline-01.svg");
+        .skyline01, .skyline02, .house01, .electricalPole01, .trainPole01, .electricalPole02, .electricalPole03 {
             background-size: 100vw;
             background-position: center center;
             background-repeat: repeat-x;
+        }
+
+        .skyline01 {
+            background-image: url("svg_img/skyline-01.svg");
             animation: skyline 80s linear infinite;
         }
 
         .skyline02 {
             background-image: url("svg_img/skyline-02.svg");
-            background-size: 100vw;
-            background-position: center center;
-            background-repeat: repeat-x;
             animation: skyline 40s linear infinite;
         }
 
         .house01 {
             background-image: url("svg_img/house-02.svg");
-            background-size: 100vw;
-            background-position: center center;
-            background-repeat: repeat-x;
             animation: skyline 20s linear infinite;
         }
 
@@ -129,32 +118,22 @@
         .electricalPole01 {
             background-image: url("svg_img/electrical_pole_01.svg");
             background-size: 150vw;
-            background-position: center center;
             background-repeat: no-repeat;
             animation: electricalPole 10s linear infinite;
         }
 
-        .trainPole01 {
-            background-image: url("svg_img/train-pole-01.svg");
+        .trainPole01, .electricalPole02, .electricalPole03 {
             background-size: 100vw;
-            background-position: center center;
-            background-repeat: repeat-x;
-            animation: skyline 2s linear infinite;
-        }
-
-        .electricalPole02 {
-            background-image: url("svg_img/electricalPole02.svg");
-            background-size: 100vw;
-            background-position: center center;
             background-repeat: repeat-x;
             animation: skyline 3s linear infinite;
         }
 
+        .electricalPole02 {
+            background-image: url("svg_img/electricalPole02.svg");
+        }
+
         .electricalPole03 {
             background-image: url("svg_img/electricalPole03.svg");
-            background-size: 100vw;
-            background-position: center center;
-            background-repeat: repeat-x;
             animation: skyline 6s linear infinite;
         }
 
@@ -174,7 +153,7 @@
         }
 
         :root {
-            color: #ffffff; /* Changed to white */
+            color: #ffffff;
             font-family: "Shantell Sans";    
             font-size: 21px;
             -ms-overflow-style: none;
@@ -183,12 +162,12 @@
         }
 
         a:link, a:visited, a:hover, a:active {
-            color: #ffffff; /* Changed to white */
+            color: #ffffff;
             text-decoration: none;
         }
 
-        img, jpg {
-            opacity: 0.9; /* Increased transparency */
+        img {
+            opacity: 0.9;
             height: auto;
         }
 
@@ -196,15 +175,11 @@
             display: none;
         }
 
-        .hidden {
-            display: none;
-        }
-
         h1, h2, h3, h4, h5 {    
             margin-top: 5px;
             margin-bottom: 5px;
             padding: 5px;
-            z-index: 11; /* Ensures text is on top */
+            z-index: 11; 
             position: relative;
         }
 
@@ -219,7 +194,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            z-index: 10; /* Ensures the container is on top */
+            z-index: 10; 
         }
 
         .left-box, .right-box {
@@ -230,8 +205,8 @@
             border: 2px solid rgba(204, 16, 16);
             box-shadow: 0px 0px 5px rgba(204, 16, 16);
             backdrop-filter: blur(1px);
-            z-index: 10; /* Brings the boxes to the foreground */
-            background-color: rgba(0, 0, 0, 0.5); /* Optional: Semi-transparent background for better text visibility */
+            z-index: 10;
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
         .left-box {
@@ -241,6 +216,36 @@
 
         .left-box:hover, .right-box:hover {
             border: 2px solid rgba(255, 50, 50);
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+                flex-direction: column;
+                transform: translate(-50%, -50%);
+            }
+
+            .left-box, .right-box {
+                width: 90%;
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .left-box img {
+                width: 100%;
+            }
+
+            #trainBG {
+                height: 50vw; /* Adjust the height for mobile */
+            }
+
+            #animation {
+                height: 40vw; /* Adjust animation height for mobile */
+            }
+
+            .bg {
+                height: 40vw; /* Adjust background height for mobile */
+            }
         }
     </style>
 </head>
@@ -257,9 +262,7 @@
     <div class="bridge bg"></div>
     <div id="grain"></div>
     
-    <!-- Create a container element for the animation -->
     <div id="animation"></div>
-    <!-- Load the animation -->
     <div id="maskBottom"></div>
     <div id="maskTop"></div>
 
@@ -283,11 +286,11 @@
       var animation = bodymovin.loadAnimation({
         container: document.getElementById('animation'),
         renderer: 'svg',
-        loop: true,  // Set loop property to true to make the animation loop indefinitely
+        loop: true,
         autoplay: true,
         path: '/json/train-01.json'
       });
     </script>
     
-  </body>
+</body>
 </html>
